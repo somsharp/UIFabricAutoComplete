@@ -5,7 +5,7 @@ export const CalloutStyle = () => {
 };
 export const AutocompleteStyles = () => {
   return ({
-    marginTop: '10px', xmarginBottom: '20px', width: '300px', display: 'inline-block'
+    marginTop: '10px', marginBottom: '20px', width: '300px', display: 'inline-block'
   });
 };
 export const SuggestionListStyle = () => {
