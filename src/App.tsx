@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stack, Text, Link, FontWeights } from 'office-ui-fabric-react';
-import { Autocomplete, ISuggestionItem } from './Components/SearchBoxWithSuggestion';
+import { Autocomplete, ISuggestionItem } from './Components/Autocomplete';
 
 const boldStyle = { root: { fontWeight: FontWeights.semibold } };
 
