@@ -45,9 +45,16 @@ export class Autocomplete extends React.Component<ISearchSuggestionsProps, IAuto
           id={'SuggestionSearchBox'}
           placeholder={'Search ' + this.props.searchTitle}
           onSearch={newValue => this.onSearch(newValue)}
-          onChange={newSearchText => {
-            newSearchText.trim() !== '' ? this.showSuggestionCallOut() : this.hideSuggestionCallOut();
-            this.setState({ searchText: newSearchText });
+          onChange={(event?: React.ChangeEvent<HTMLInputElement>, newValue?: string) => {
+            if (event === undefined
+              || event === null
+              || newValue === undefined
+              || newValue === null) {
+              // TODO?
+            } else {
+              newValue.trim() !== '' ? this.showSuggestionCallOut() : this.hideSuggestionCallOut();
+              this.setState({ searchText: newValue });
+            }
           }}
         />
         {this.renderSuggestions()}
